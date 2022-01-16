@@ -21,16 +21,16 @@ namespace Refrigirator.BL.FinalPrintResult
             this.Fridge = GettingNewFrisge.Fridge;
 
             // Part 2
-            PrintLeftFreeSpaceInFridge leftSpace = new PrintLeftFreeSpaceInFridge(this.Fridge);
+            //PrintLeftFreeSpaceInFridge leftSpace = new PrintLeftFreeSpaceInFridge(this.Fridge);
 
-            Console.WriteLine("Fridge Consistency: ");
-            PrintAllFridgeConsistency fridgeConsistency = new PrintAllFridgeConsistency(this.Fridge);
+            //Console.WriteLine("Fridge Consistency: ");
+            //PrintAllFridgeConsistency fridgeConsistency = new PrintAllFridgeConsistency(this.Fridge);
 
-            TakeOutAnItem takeOutItem = new TakeOutAnItem(this.Fridge);
+            //TakeOutAnItem takeOutItem = new TakeOutAnItem(this.Fridge);
 
-            PrintAddingNewItem putNewItemIn = new PrintAddingNewItem(this.Fridge);
+            //PrintAddingNewItem putNewItemIn = new PrintAddingNewItem(this.Fridge);
 
-            FridgeCleaning cleanFridge = new FridgeCleaning(this.Fridge);
+            //FridgeCleaning cleanFridge = new FridgeCleaning(this.Fridge);
 
             PossibleFoodOrDrinkInputs FoodOrDrinkInputs = new PossibleFoodOrDrinkInputs();
             PossibleFoodTypeInputs FoodTypeInputs = new PossibleFoodTypeInputs();
@@ -39,17 +39,17 @@ namespace Refrigirator.BL.FinalPrintResult
             // These three following functions are based on the same structure, 
             // And all return the same error, which is about index:
 
-            // Doesn't Work
-            PrintAllExpiredDatesInOrder expiredDates = new PrintAllExpiredDatesInOrder(this.Fridge);
+            //// Doesn't Work
+            //PrintAllExpiredDatesInOrder expiredDates = new PrintAllExpiredDatesInOrder(this.Fridge);
 
-            // Doesn't Work
-            OrganizedShelfsInOrder organizedShelfs = new OrganizedShelfsInOrder(this.Fridge);
+            //// Doesn't Work
+            //OrganizedShelfsInOrder organizedShelfs = new OrganizedShelfsInOrder(this.Fridge);
 
-            // Doesn't Work
-            PrintOrganizedFridges organizedFridges = new PrintOrganizedFridges();
+            //// Doesn't Work
+            //PrintOrganizedFridges organizedFridges = new PrintOrganizedFridges();
 
-            // Part 3
-            PrintGettingRidOf goingShopping = new PrintGettingRidOf(this.Fridge);
+            //// Part 3
+            //PrintGettingRidOf goingShopping = new PrintGettingRidOf(this.Fridge);
         }
     }
 }

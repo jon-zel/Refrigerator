@@ -15,7 +15,12 @@ namespace Refrigirator.BL.Actions
             this.Fridge = Fridge;
             Console.WriteLine("Empty Space In The Fridge:");
             if (this.Fridge != null)
-                Console.WriteLine(this.Fridge.EmptySpaceInAllFridge() + "cm");
+            {
+                if (this.Fridge.EmptySpaceInAllFridge() < 0)
+                    Console.WriteLine("You need to re-organize the frigde, because there isn't enough space, and items are laying on one another.");
+                else
+                    Console.WriteLine(this.Fridge.EmptySpaceInAllFridge() + "cm");
+            }
             else
                 Console.WriteLine("Fridge Was Null.");
         }

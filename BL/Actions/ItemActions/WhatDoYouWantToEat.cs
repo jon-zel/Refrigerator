@@ -23,21 +23,6 @@ namespace Refrigirator
         }
 
         // Methods
-        public string PrintProperList()
-        {
-            string s = "";
-
-            if (this.suitableItems == null)
-                Console.WriteLine("Couldn't Find Proper Request.");
-            else
-                for (int i = 0; i < this.suitableItems.Count; i++)
-                {
-                    s += this.suitableItems[i].ToString() + "\n";
-                }
-
-            return s;
-        }
-
         public void FinalList()
         {
             if (this.Fridge != null && this.Fridge.Shelfs != null)
@@ -46,6 +31,29 @@ namespace Refrigirator
                 {
                     this.FindItem(s.Items);
                 }
+
+                if (this.suitableItems != null)
+                {
+                    this.ValidateSuitableItems();
+                    Console.WriteLine(this.suitableItems.ToString());
+                }
+                else
+                    Console.WriteLine("Couldn't Find Proper Request.");
+            }
+        }
+
+        public void ValidateSuitableItems()
+        {
+            if (this.suitableItems != null)
+            {
+                foreach (Item i in this.suitableItems)
+                {
+                    if (i != null && i.LastDay < DateTime.Today)
+                        this.suitableItems.Remove(i);
+                }
+
+                if (this.suitableItems == null)
+                    Console.WriteLine("The Requested Items Are Expired.");
             }
         }
 
@@ -60,5 +68,8 @@ namespace Refrigirator
                 }
             }
         }
+
+
+
     }
 }

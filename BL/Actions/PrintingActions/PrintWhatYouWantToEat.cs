@@ -27,10 +27,10 @@ namespace Refrigirator.BL.Actions.PrintingActions
             if (this.ValidateFoodOrDrinkInput(FoodOrDrink) && this.ValidateFoodTypeInput(FoodType))
             {
                 WhatDoYouWantToEat wannaEat = new WhatDoYouWantToEat(this.Fridge, FoodOrDrink, FoodType);
-                Console.WriteLine(wannaEat.PrintProperList());
+                wannaEat.FinalList();
             }
             else
-                Console.WriteLine("Inputs Are Wrong. No Such Possible In The System.");
+                Console.WriteLine("Inputs Are Wrong. One Of Them Doesn't Exist In The System.");
         }
 
         // Methods
@@ -42,8 +42,8 @@ namespace Refrigirator.BL.Actions.PrintingActions
                     if (s.Equals(FoodType))
                         return true;
             }
-
-            Console.WriteLine("Possible Food Types List Is Null.");
+            else
+                Console.WriteLine("Possible Food Types List Is Null.");
 
             return false;
         }
@@ -55,9 +55,9 @@ namespace Refrigirator.BL.Actions.PrintingActions
                 foreach (string s in this.possibleFoodOrDrinkInputs)
                     if (s.Equals(FoodOrDrink))
                         return true;
-            }
-
-            Console.WriteLine("Possible Food Or Drink Inputs List Is Null.");
+             }
+             else
+                Console.WriteLine("Possible Food Or Drink Inputs List Is Null.");
             
             return false;
         }
