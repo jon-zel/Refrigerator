@@ -5,6 +5,10 @@ using System.Text;
 
 namespace Refrigirator
 {
+    // CR: On layers you need to know why you creating them
+    // CR: Common layer is the core of the project, it stores all the the basic models for the rest of the layers
+        
+
     class Fridge
     {
         // Properties
