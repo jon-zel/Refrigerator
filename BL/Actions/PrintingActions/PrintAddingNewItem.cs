@@ -15,7 +15,7 @@ namespace Refrigirator.BL.Actions.PrintingActions
         {
             this.Fridge = Fridge;
 
-            CreateNewItem newItem = new CreateNewItem();
+            CreateNewItems newItem = new CreateNewItems();
             PutNewItemIn putNewItem = new PutNewItemIn(this.Fridge, newItem.Item);
             putNewItem.CheckIfAdded();
             Console.WriteLine(this.Fridge.ToString());
