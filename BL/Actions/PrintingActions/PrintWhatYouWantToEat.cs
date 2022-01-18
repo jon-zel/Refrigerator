@@ -13,7 +13,7 @@ namespace Refrigirator.BL.Actions.PrintingActions
 
 
         // Constructor
-        public PrintWhatYouWantToEat(Fridge Fridge, List<string> possibleFoodTypes, List<string> possibleFoodOrDrinkInputs)
+        public PrintWhatYouWantToEat(Fridge Fridge)
         {
             this.Fridge = Fridge;
             this.possibleFoodTypes = possibleFoodTypes;

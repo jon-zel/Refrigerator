@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Refrigirator.DAL;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,8 +16,8 @@ namespace Refrigirator.CommonLayer.CreatingNewItems
         public DateTime LastDay { get; set; }
         public double Capacity { get; set; }
 
-        private List<string> possibleFoodOrDrink;
-        private List<string> FoodTypes;
+        public List<string> possibleFoodOrDrink { get; set; }
+        public List<string> FoodTypes { get; set; }
         private int Day;
         private int Month;
         private int Year;
@@ -24,8 +25,11 @@ namespace Refrigirator.CommonLayer.CreatingNewItems
         // Constructror
         public CreateOneNewItem()
         {
-            this.possibleFoodOrDrink = new List<string> { "Food", "Drink" };
-            this.FoodTypes = new List<string> { "Parve", "Meety", "Milky" };
+            PossibleFoodOrDrinkInputs FoodOrDrinkInputs = new PossibleFoodOrDrinkInputs();
+            PossibleFoodTypeInputs FoodTypeInputs = new PossibleFoodTypeInputs();
+
+            this.possibleFoodOrDrink = FoodOrDrinkInputs.possibleInputs;
+            this.FoodTypes = FoodTypeInputs.possibleInputs;
 
             this.Item = this.InputNewItem();
         }

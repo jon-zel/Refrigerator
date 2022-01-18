@@ -28,7 +28,7 @@ namespace Refrigirator.CommonLayer.CreatingNewFridges
             Console.WriteLine("How many shelfs do you want this fridge to contain?");
             this.shelfsAmount = int.Parse(Console.ReadLine());
 
-            CreateOneNewFridge createFridges = new CreateOneNewFridge(this.shelfsAmount);
+            CreateOneNewFridge createFridges = new CreateOneNewFridge();
 
             while (answer != _flag)
             {

@@ -15,9 +15,10 @@ namespace Refrigirator.CommonLayer.CreatingNewFridges
         public List<Shelf> Shelfs { get; set; }
 
         // Constructror
-        public CreateOneNewFridge(int shelfsAmount)
+        public CreateOneNewFridge()
         {
-            this.ShelfsAmount = shelfsAmount;
+            Console.WriteLine("How many shelfs you want this fridge to have?");
+            this.ShelfsAmount = int.Parse(Console.ReadLine()); ;
             CreatingNewShelfs createNewShelfs = new CreatingNewShelfs(this.ShelfsAmount);
             this.Shelfs = createNewShelfs.allShelfs;
 
