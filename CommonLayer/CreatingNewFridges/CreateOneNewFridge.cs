@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Refrigirator.CommonLayer.CreatingNewShelfsList;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Text;
 
 namespace Refrigirator.CommonLayer.CreatingNewFridges
 {
@@ -15,6 +15,8 @@ namespace Refrigirator.CommonLayer.CreatingNewFridges
         public List<Shelf> Shelfs { get; set; }
 
         // Constructror
+        //CR: Functions in the class not need to be in the ctor
+        //CR: Split it to diffrent class with his functions
         public CreateOneNewFridge()
         {
             Console.WriteLine("How many shelfs you want this fridge to have?");
@@ -26,6 +28,16 @@ namespace Refrigirator.CommonLayer.CreatingNewFridges
         }
 
         // Methods
+        //CR: Don't use cw in common layer
+        //CR: Don't implement the algorithem
+        //CR: SRP
+        //CR: Remove unncesery comments in final proj
+        //CR: Remove unnecesery spaces
+        //CR: Factory if you know it?
+        //CR: dont use var!!!!!!!!!!!
+        //CR: Dont use this
+
+        //TODO:something
         public Fridge InputNewItem()
         {
             Console.WriteLine("Enter Fridge's Type Name:");
@@ -36,7 +48,6 @@ namespace Refrigirator.CommonLayer.CreatingNewFridges
             this.Color = Color.Green;
 
              //לבדוק שצבע הגיוני
-            
             Console.WriteLine("Enter Shelfs Amount:");
             this.ShelfsAmount = int.Parse(Console.ReadLine());
 

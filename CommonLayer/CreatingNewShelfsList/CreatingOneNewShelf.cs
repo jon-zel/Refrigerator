@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Refrigirator.CommonLayer.CreatingNewShelfs
+namespace Refrigirator.CommonLayer.CreatingNewShelfsList
 {
     class CreatingOneNewShelf
     {

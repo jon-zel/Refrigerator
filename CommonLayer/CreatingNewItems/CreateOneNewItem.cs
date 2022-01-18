@@ -23,6 +23,8 @@ namespace Refrigirator.CommonLayer.CreatingNewItems
         private int Year;
 
         // Constructror
+        //CR: Functions in the class not need to be in the ctor
+        //CR: Split it to diffrent class with his functions
         public CreateOneNewItem()
         {
             PossibleFoodOrDrinkInputs FoodOrDrinkInputs = new PossibleFoodOrDrinkInputs();
@@ -35,6 +37,8 @@ namespace Refrigirator.CommonLayer.CreatingNewItems
         }
 
         // Methods
+        //CR: Don't implement the algorithem
+        //CR: SRP
         public bool FoodOrDrinkVerify()
         {
             if (this.possibleFoodOrDrink != null)
@@ -49,6 +53,8 @@ namespace Refrigirator.CommonLayer.CreatingNewItems
             return (false);
         }
 
+        //CR: Don't use cw in common layer
+        //CR: Don't implement the algorithem
         public void GetOnlyFoodOrDrink()
         {
             while (!this.FoodOrDrinkVerify())
@@ -58,6 +64,8 @@ namespace Refrigirator.CommonLayer.CreatingNewItems
             }
         }
 
+        //CR: Don't implement the algorithem
+        //CR: SRP
         public bool FoodTypeVerify()
         {
             if (this.FoodTypes != null)
@@ -72,6 +80,9 @@ namespace Refrigirator.CommonLayer.CreatingNewItems
             return (false);
         }
 
+        //CR: Don't use cw in common layer
+        //CR: Don't implement the algorithem
+        //CR: SRP
         public void GetCorrectFoodType()
         {
             while (!this.FoodTypeVerify())
@@ -81,6 +92,9 @@ namespace Refrigirator.CommonLayer.CreatingNewItems
             }
         }
 
+        //CR: Don't use cw in common layer
+        //CR: Don't implement the algorithem
+        //CR: SRP
         public Item InputNewItem()
         {
              Console.WriteLine("Enter Item's Name:");
