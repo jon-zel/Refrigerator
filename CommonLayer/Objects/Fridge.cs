@@ -43,9 +43,10 @@ namespace Refrigirator
             //Shelfs.ForEach(shelf => GetFreeSpace(freeSpace, shelf))
             //return freeSpace;
 
-
-            if (!(this.Shelfs is null))
-            {
+            //dana         
+            if (isShelsExists())
+            {           
+                // linq
                 double freeSpace = 0;
 
                 foreach (Shelf shelf in this.Shelfs)
@@ -57,11 +58,22 @@ namespace Refrigirator
                 return freeSpace;
             }
             else
-                Console.WriteLine("There are no shelfs");
+               printIsShelsExists()       
 
             return -1;
         }
 
+        // iohanan
+         public bool isShelsExists()
+        {
+           return !(this.Shelfs is null)();
+        }
+        
+        public void printIsShelsExists()
+        {
+             Console.WriteLine("There are no shelfs");
+        }
+        
         //private double GetFreeSpace(double freeSpace, Shelf shelf)
         //{
         //    if(shelf is null)
